@@ -7,11 +7,8 @@ export interface PageProps {}
 export default function Page({}: PageProps) {
   return (
     <>
-      <Header>Dashboard</Header>
+      <Header>Dashboard / New Companies</Header>
+      <p>Some additional info about company</p>
     </>
-    // <main>
-    //   <h1 className="text-2xl">Dashboard Page</h1>
-    //   <MagicButton />
-    // </main>
   );
 }
