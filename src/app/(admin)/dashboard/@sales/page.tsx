@@ -8,6 +8,13 @@ import MagicButton from '@/app/components/magic-button';
 
 export interface PageProps {}
 
+export interface getSummarySalesProps {
+  companyId: number;
+  companyTitle: string;
+  sold: number;
+  income: number;
+}
+
 export default async function Page({}: PageProps) {
   const data: any = await new Promise(res => {
     setTimeout(() => {
@@ -33,13 +40,15 @@ export default async function Page({}: PageProps) {
           </>
         }
       >
-        {data.map(({ companyId, companyTitle, sold, income }) => (
-          <tr key={companyId}>
-            <SummaryTableCell>{companyTitle}</SummaryTableCell>
-            <SummaryTableCell align="center">{sold}</SummaryTableCell>
-            <SummaryTableCell align="center">{`$${income}`}</SummaryTableCell>
-          </tr>
-        ))}
+        {data.map(
+          ({ companyId, companyTitle, sold, income }: getSummarySalesProps) => (
+            <tr key={companyId}>
+              <SummaryTableCell>{companyTitle}</SummaryTableCell>
+              <SummaryTableCell align="center">{sold}</SummaryTableCell>
+              <SummaryTableCell align="center">{`$${income}`}</SummaryTableCell>
+            </tr>
+          )
+        )}
       </SummaryTable>
     </DashboardCard>
   );
