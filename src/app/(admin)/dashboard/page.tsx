@@ -1,4 +1,3 @@
-// import MagicButton from '@/app/components/magic-button';
 import React from 'react';
 import Header from '@/app/components/header';
 
@@ -9,9 +8,5 @@ export default function Page({}: PageProps) {
     <>
       <Header>Dashboard</Header>
     </>
-    // <main>
-    //   <h1 className="text-2xl">Dashboard Page</h1>
-    //   <MagicButton />
-    // </main>
   );
 }
