@@ -1,11 +1,12 @@
-// import StatusLabel, { Status } from './components/status-label';
-import AddCompanyButton from '@/app/components/add-company-button';
-import MagicButton from './components/magic-button';
+import Sidebar from './components/sidebar';
 
 export default function Home() {
   return (
     <main>
-      <h1 className="text-5xl">Home page Next JS</h1>
+      <Sidebar />
+      <h1 className="text-center text-5xl py-10 bg-gray-100">
+        Home page Next JS
+      </h1>
       {/* <AddCompanyButton />
       <MagicButton /> */}
       {/* <StatusLabel status={Status.Active}>Active</StatusLabel>
